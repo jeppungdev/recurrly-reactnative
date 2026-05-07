@@ -20,9 +20,6 @@ const SubscriptionCard = ({
   expanded,
   paymentMethod,
   startDate,
-  frequency,
-  isCancelling,
-  onCancelPress,
   status,
   onPress,
 }: SubscriptionCardProps) => {
@@ -62,7 +59,7 @@ const SubscriptionCard = ({
                   numberOfLines={1}
                   ellipsizeMode="tail"
                 >
-                  {paymentMethod?.trim()}
+                  {paymentMethod?.trim() ?? "Not provided"}
                 </Text>
               </View>
             </View>
@@ -74,7 +71,7 @@ const SubscriptionCard = ({
                   numberOfLines={1}
                   ellipsizeMode="tail"
                 >
-                  {category?.trim()}
+                  {category?.trim() ?? "Not provided"}
                 </Text>
               </View>
             </View>
